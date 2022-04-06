@@ -1,0 +1,15 @@
+﻿@if (TempData["erro"] != null)
+            {
+                <h1> @TempData["erro"]</h1>
+            }
+
+<h1> Login </h1>
+
+<form method="post" action="/Login/Entrar">
+    <input type="text" name="usuario"> 
+    <br/>
+    <input type="password" name="senha">
+    <br/>
+    <button type="submit"> Login </button>
+</form>
+

@@ -1,4 +1,5 @@
 ﻿using Login.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,10 @@ using System.Threading.Tasks;
 namespace Login.Controllers
 {
     public class ClientesController : Controller
+
+
     {
+        [Authorize(AuthenticationSchemes ="Autenticacao")]
         public IActionResult Index()
         {
             Random rand = new Random();
